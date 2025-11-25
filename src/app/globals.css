@@ -12,15 +12,31 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  --color-card: rgb(236, 236, 239);
+  --color-card-body: rgba(45, 43, 67, 0.838);
+  --color-card-name: rgba(251, 220, 43);
+}
+
+
+@layer utilities {
+
+  .clip {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+  }
+
 }
